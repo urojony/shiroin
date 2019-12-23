@@ -4,8 +4,8 @@ from distutils.core import setup
 setup(
     name='shiroin',
     version='1.0.0',
-    packages=['shiroin',],
-    install_requires=['scipy','sympy'],
+    py_modules=['shiroin'],
+    install_requires=['scipy>=0.15','sympy'],
     author='Grzegorz Adamski',
     author_email='grzes-a1@o2.pl',
     python_requires='>=3.5',
