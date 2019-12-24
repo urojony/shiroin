@@ -13,6 +13,8 @@ Copy one of these commands in terminal/cmd.
 ```pip install shiroin```
 * Install from GitHub.
 ```pip install git+https://github.com/urojony/shiroin```
+If you can't install libraries (for example you don't have administrator rights), try to add `--user` to command.
+Note that ShiroIn works only for python3, if your default python is python2, then you should probably write `pip3` instead of `pip`.
 
 ## ShiroIn in 15 minutes
 For start, type ```python3``` in terminal/cmd.
