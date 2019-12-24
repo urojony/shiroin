@@ -4,10 +4,10 @@ shiroSeed=None
 shiroTranslation={}
 translationList=['numerator:','denominator:','status:',
 'Substitute',"Formula after substitution:",
-"Numerator after substitutions:","From AM-GM inequality:",
+"Numerator after substitutions:","From weighted AM-GM inequality:",
 'Sum of all inequalities gives us a desired proof.',
-"Program couldn't find solution with integer coefficients. Try \
-to multiple the formula by some integer and run program again.",
+"Program couldn't find a solution with integer coefficients. Try "+
+"to multiple the formula by some integer and run this function again.",
 "Program couldn't find any proof.",
 "Try to set higher linprogiter parameter."
 ]
@@ -132,7 +132,7 @@ def _list2proof(lcoef,lfun,rcoef,rfun,variables,itermax,linprogiter,translation)
 		if itern==1:
 			print(translation['status:'],res.status)
 			if res.status==0:
-				print(translation['From AM-GM inequality:'])
+				print(translation['From weighted AM-GM inequality:'])
 		if res.status>1:
 			break
 		for i in range(m):
@@ -163,8 +163,8 @@ def _list2proof(lcoef,lfun,rcoef,rfun,variables,itermax,linprogiter,translation)
 		lhs='0'
 	elif res.status==0:
 		print(translation[
-		"Program couldn't find solution with integer coefficients. Try "+
-		"to multiple the formula by some integer and run program again."])
+		"Program couldn't find a solution with integer coefficients. Try "+
+		"to multiple the formula by some integer and run this function again."])
 	elif(res.status==2):
 		print(translation["Program couldn't find any proof."])
 		return
