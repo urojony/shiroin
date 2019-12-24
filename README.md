@@ -154,3 +154,32 @@ $$  0  \le
 0  $$
 Sum of all inequalities gives us a desired proof.
 ```
+
+Now let's get back to problem 3. Now our goal is to find the minimum of `a^2*b^2/c^2+b^2*c^2/a^2+c^2*a^2/b^2` assuming `a^2+b^2+c^2=1` and `a,b,c>0`. It is equivalent problem to finding minimum of `xy/z+yz/x+zx/y` assuming `x+y+z=1` and `x,y,z>0`. The first idea is to suppose that the minimum is reached when `x=y=z`. In that case, `x=y=z=1/3` and formula is equal to 1. Now we can substitute `z-> 1-x-y`. Constraints for variables are `x>0`, `y>0`, `x+y<1`. We can rewrite it as `x in (0,1-y)`, `y in (0,1)`. It's very similar to defining integration limits. After you define interval of x, you cannot use x in any next interval. **Warning:** at this moment `makesubs` **doesn't warn you if your intervals doesn't follow this rule!**
+```python
+>>> formula=Sm('xy/z+yz/x+zx/y-1').subs('z',S('1-x-y'))
+>>> newformula,values=makesubs(formula,'[0,1-y],[0,1]','1/3,1/3')
+```
+```
+Substitute $ x \to -y+1+(y-1)/(x+1) $
+Substitute $ y \to 1-1/(y+1) $
+```
+```python
+prove(newformula,values)
+```
+```
+Substitute $ y \to y/2 $
+numerator: $$x^4y^2+x^3y^2-2x^3y-4x^2y+4x^2+xy^2-2xy+y^2$$
+denominator: $$x^3y^2+2x^3y+2x^2y^2+4x^2y+xy^2+2xy$$
+status: 0
+From weighted AM-GM inequality:
+$$2x^3y \le x^4y^2+x^2$$
+$$4x^2y \le x^3y^2+2x^2+xy^2$$
+$$2xy \le x^2+y^2$$
+
+$$  0  \le 
+0  $$
+Sum of all inequalities gives us a desired proof.
+```
+Proof is found, so the assumption that 1 is minimum of `xy/z+yz/x+zx/y` was good.
+Functions `S` and `Sm` creates a SymPy object from a string. The only difference is that `Sm` assumes that there are no multiletter variables and adds a multiplication sign between every two terms which has no operator sign, so object `Sm(xy/z+yz/x+zx/y)` has 3 variables `x,y,z` and `S('xy/z+yz/x+zx/y')` has 6 variables `x,y,z,xy,yz,zx`.
