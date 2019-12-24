@@ -118,7 +118,7 @@ Let's skip the problem 3 and look solve the problem 4 instead. Now the inequalit
 `1/(1-x^2)+1/(1-y^2)>=2/(1-xy)` for `0<x,y<1`. So let's try simple `prove`.
 
 ```python
-prove('1/(1-x^2)+1/(1-y^2)-2/(1-x*y)')
+>>> prove('1/(1-x^2)+1/(1-y^2)-2/(1-x*y)')
 ```
 ```
 numerator: $$-x^3y+2x^2y^2-x^2-xy^3+2xy-y^2$$
