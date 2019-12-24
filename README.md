@@ -14,7 +14,7 @@ Copy one of these commands in terminal/cmd.
 * Install from GitHub.
 ```pip install git+https://github.com/urojony/shiroin```
 
-## ShiroIn in 10 minutes
+## ShiroIn in 15 minutes
 For start, type ```python3``` in terminal/cmd.
 
 ```python
@@ -137,7 +137,7 @@ Let's go back to our problem. If `x=y`, then `1/(1-x^2)+1/(1-y^2)-2/(1-x*y)=0`, 
 Substitute $ x \to 1-1/(x+1) $
 Substitute $ y \to 1-1/(y+1) $
 ```
-```
+```python
 >>> prove(newformula*6,values)
 ```
 ```
