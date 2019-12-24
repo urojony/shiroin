@@ -17,7 +17,7 @@ Copy one of these commands in terminal/cmd.
 If you can't install libraries (for example you don't have administrator rights), try to add `--user` to command.
 Note that ShiroIn works only for python3, if your default python is python2, then you should probably write `pip3` instead of `pip`.
 
-## ShiroIn in 15 minutes
+## ShiroIn tutorial
 For start, type ```python3``` in terminal/cmd.
 
 ```python
@@ -26,7 +26,7 @@ For start, type ```python3``` in terminal/cmd.
 ```
 First line obviously loads this package. Second one sets a seed for proving functions. If you don't write it, you can get slightly different proof each time you run the function. 
 
-Now make some proofs. We will use problems from https://www.imomath.com/index.php?options=593&lmm=0
+Now make some proofs. We will use problems from https://www.imomath.com/index.php?options=593&lmm=0.
 The first inequality to prove is `a^2+b^2+c^2>= ab+ac+bc` for all real numbers. Function `prove` tries to prove that given formula is nonnegative, **assuming all variables are nonnegative**. In this case it's not a problem, since all powers on the left side are even, so if `|a|^2+|b|^2+|c|^2>= |ab|+|ac|+|bc|`, then `a^2+b^2+c^2= |a|^2+|b|^2+|c|^2>= |ab|+|ac|+|bc|>= ab+ac+bc`. There is a method we can use if this trick doesn't work, but it complicates the formula, so there is no need to use it here.
 ```python
 >>> prove('a^2+b^2+c^2- (a*b+a*c+b*c)')
