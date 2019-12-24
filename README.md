@@ -9,7 +9,7 @@ A Python library for proving polynomial inequalities. It uses SciPy (more specif
 
 ## Installation
 Copy one of these commands in terminal/cmd.
-* Install from PyPI repository (not ready yet).
+* Install from PyPI repository.
 ```pip install shiroin```
 * Install from GitHub.
 ```pip install git+https://github.com/urojony/shiroin```
