@@ -6,7 +6,7 @@ translationList=['numerator:','denominator:','status:',
 'Substitute',"Formula after substitution:",
 "Numerator after substitutions:","From AM-GM inequality:",
 'Sum of all inequalities gives us a desired proof.',
-"Program couldn't find solution with integer coefficients. Try\
+"Program couldn't find solution with integer coefficients. Try \
 to multiple the formula by some integer and run program again.",
 "Program couldn't find any proof.",
 "Try to set higher linprogiter parameter."
@@ -60,7 +60,7 @@ def Sm(formula):
 		formula.replace(' ','')
 		for i in range(2):
 			formula=re.sub(r'([0-9a-zA-Z)])([(a-zA-Z])',r'\1*\2',formula)
-		formula=S(formula)
+	formula=S(formula)
 	return formula
 def _input2fraction(formula,variables,values,translation):
 	formula=S(formula)
@@ -163,7 +163,7 @@ def _list2proof(lcoef,lfun,rcoef,rfun,variables,itermax,linprogiter,translation)
 		lhs='0'
 	elif res.status==0:
 		print(translation[
-		"Program couldn't find solution with integer coefficients. Try"+
+		"Program couldn't find solution with integer coefficients. Try "+
 		"to multiple the formula by some integer and run program again."])
 	elif(res.status==2):
 		print(translation["Program couldn't find any proof."])
