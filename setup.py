@@ -13,4 +13,11 @@ setup(
     license='BSD',
     description='Software for proving inequalities',
     long_description=open('README.md').read(),
+    classifiers=[
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent"
+    "Intended Audience :: Science/Research"
+    "Programming Language :: Python :: 3"
+    "Topic :: Scientific/Engineering :: Mathematics"
+    ],
 )
