@@ -5,7 +5,6 @@ setup(
     name='shiroin',
     version='1.0.0',
     author='Grzegorz Adamski',
-    py_modules=['shiroin'],
     author_email='grzes-a1@o2.pl',
     python_requires='>=3.5',
     url='https://github.com/urojony/shiroin',
