@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from setuptools import setup
+from setuptools import setup,find_packages
 
 setup(
     name='shiroin',
@@ -12,7 +12,7 @@ setup(
     description='Software for proving inequalities',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     classifiers=[
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
