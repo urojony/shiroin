@@ -4,4 +4,5 @@ shiroin/__init__.py
 shiroin.egg-info/PKG-INFO
 shiroin.egg-info/SOURCES.txt
 shiroin.egg-info/dependency_links.txt
+shiroin.egg-info/requires.txt
 shiroin.egg-info/top_level.txt

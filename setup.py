@@ -13,6 +13,7 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
     packages=find_packages(),
+    install_requires=['scipy>=0.15','sympy'],
     classifiers=[
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
