@@ -258,7 +258,10 @@ def makesubs(formula,intervals,values=None,variables=None,numden=False,translati
 			den=den.subs(var,var+1)
 			equations=[equation.subs(var,var+1) for equation in equations]
 	#print(equations)
-	values=ssolve(equations,variables)[0]
+	if values:
+		values=ssolve(equations,variables)
+		if len(values):
+			vaues=values[0]
 	num,den=expand(num),expand(den)
 	#print(translation["Formula after substitution:"],"$$",slatex(num/den),'$$')
 	if values and numden:
