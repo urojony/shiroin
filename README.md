@@ -218,7 +218,7 @@ Sum of all inequalities gives us a desired proof.
 
 
 
-Now let's get back to problem 3. Now our goal is to find the minimum of `a^2*b^2/c^2+b^2*c^2/a^2+c^2*a^2/b^2` assuming `a^2+b^2+c^2=1` and `a,b,c>0`. It is equivalent problem to finding minimum of `xy/z+yz/x+zx/y` assuming `x+y+z=1` and `x,y,z>0`. The first idea is to suppose that the minimum is reached when `x=y=z`. In that case, `x=y=z=1/3` and formula is equal to 1. Now we can substitute `z-> 1-x-y`. Constraints for variables are `x>0`, `y>0`, `x+y<1`. We can rewrite it as `x in (0,1-y)`, `y in (0,1)`. It's very similar to defining integration limits. After you define interval of x, you cannot use x in any next interval. **Warning:** at this moment `makesubs` **doesn't warn you if your intervals doesn't follow this rule!**
+Now let's get back to problem 3. Now our goal is to find the minimum of `a^2*b^2/c^2+b^2*c^2/a^2+c^2*a^2/b^2` assuming `a^2+b^2+c^2=1` and `a,b,c>0`. It is equivalent problem to finding minimum of `xy/z+yz/x+zx/y` assuming `x+y+z=1` and `x,y,z>0`. The first idea is to suppose that the minimum is reached when `x=y=z`. In that case, `x=y=z=1/3` and formula is equal to 1. Now we can substitute `z-> 1-x-y`. Constraints for variables are `x>0`, `y>0`, `x+y<1`. We can rewrite it as `x in (0,1-y)`, `y in (0,1)`. It's very similar to defining integration limits. After you define interval of x, you cannot use x in any next interval. **Warning:** at this moment `makesubs` **doesn't warn you if your list of intervals doesn't follow this rule!**
 
 ```python
 >>> formula=Sm('xy/z+yz/x+zx/y-1').subs('z',S('1-x-y'))
@@ -252,7 +252,3 @@ Sum of all inequalities gives us a desired proof.
 Proof is found, so the assumption that 1 is the minimum of `xy/z+yz/x+zx/y` was good.
 
 Functions `S` and `Sm` creates a SymPy object from a string. The only difference is that `Sm` assumes that there are no multi-letter variables and adds a multiplication sign between every two terms which has no operator sign, so object `Sm(xy/z+yz/x+zx/y)` has 3 variables `x,y,z` and `S('xy/z+yz/x+zx/y')` has 6 variables `x,y,z,xy,yz,zx`.
-
-
-
-
