@@ -34,11 +34,12 @@ If you can't install libraries (for example you don't have administrator rights)
 
 Note that ShiroIn works only for python3, if your default python is python2, then you should probably write `pip3` instead of `pip`.
 
-
+You can also copy `shiroin/__init__.py` file to your computer and rename it to `shiroin.py`, but then you have to add 
+directory with this file to PYTHONPATH or navigate to this directory each time before running python in terminal/cmd.
 
 ## ShiroIn tutorial
 
-For start, type ```python3``` in terminal/cmd.
+For start, type `python3` (or `python`, if Python 3 is a default one) in terminal/cmd.
 
 
 
