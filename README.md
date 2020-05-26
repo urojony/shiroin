@@ -21,4 +21,4 @@ Note that ShiroIn works only for python3, if your default python is python2, the
 You can also copy shiroin/__init__.py file to your computer and rename it to shiroin.py, but then you have to add directory with this file to PYTHONPATH or navigate to this directory each time before running python in terminal/cmd.
 
 ## Tutorial 
-The tutorial is in the tutorial.ipynb file. You can also check examples.py for more examples of usage and statistics.ipynb for some approaches to automate proving inequalities even more.
+The tutorial is in the tutorial.ipynb file (on [GitHub webpage of the project](https://github.com/urojony/shiroin)). You can also check examples.py for more examples of usage and statistics.ipynb for some approaches to automate proving inequalities even more.
