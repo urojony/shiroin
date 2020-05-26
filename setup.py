@@ -3,7 +3,7 @@ from setuptools import setup,find_packages
 
 setup(
     name='shiroin',
-    version='1.0.1',
+    version='1.1.0',
     author='Grzegorz Adamski',
     author_email='grzes-a1@o2.pl',
     python_requires='>=3.5',
